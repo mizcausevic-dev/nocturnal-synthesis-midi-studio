@@ -1,21 +1,104 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="neon" data-mode="dark" class="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Nocturnal Synthesis // 50 Synthwave &amp; Darkwave Lead MIDI Patterns</title>
+    <title>Nocturnal Synthesis: 50 Free Synthwave and Darkwave Lead MIDI Files</title>
     <meta
       name="description"
-      content="Executive Interactive Web Studio for 50 production-ready Synthwave and Darkwave lead MIDI compositions (1,024 note events at 480 PPQ), with dry/FX Web Audio synthesis, live 60fps piano roll, binary validation explorer, and Medium technical blueprint."
+      content="Audition 50 validated, monophonic MIDI lead loops for synthwave, darkwave, coldwave, and cinematic scores in your browser, then download the pack with CSV note data."
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="canonical" href="https://mizcausevic-dev.github.io/nocturnal-synthesis-midi-studio/" />
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <meta name="theme-color" content="#08070f" />
+    <meta name="color-scheme" content="dark light" />
+    <meta name="keywords" content="synthwave MIDI, darkwave MIDI, free MIDI leads, synthwave lead melody, coldwave MIDI, outrun MIDI pack, royalty-free MIDI" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Nocturnal Synthesis" />
+    <meta property="og:title" content="Nocturnal Synthesis: 50 validated synthwave and darkwave lead MIDI files" />
+    <meta property="og:description" content="Fifty hand-written lead loops for the night drive. Hear the real files in the browser, then drag them into your DAW." />
+    <meta property="og:url" content="https://mizcausevic-dev.github.io/nocturnal-synthesis-midi-studio/" />
+    <meta property="og:image" content="https://mizcausevic-dev.github.io/nocturnal-synthesis-midi-studio/images/og-hero.jpg" />
+    <meta property="og:image:width" content="1280" />
+    <meta property="og:image:height" content="720" />
+    <meta property="og:image:alt" content="A vintage mono synth by a rainy window, a neon melody line rising toward a night city" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Nocturnal Synthesis: 50 validated lead MIDI files" />
+    <meta name="twitter:description" content="Hear the real MIDI files in the browser, then drag them into your DAW. Free download." />
+    <meta name="twitter:image" content="https://mizcausevic-dev.github.io/nocturnal-synthesis-midi-studio/images/og-hero.jpg" />
+
+    <link rel="preload" as="image" href="./images/hero-night-drive.webp" type="image/webp" media="(min-width: 768px)" fetchpriority="high" />
+    <link rel="preload" as="image" href="./images/hero-night-drive-960.webp" type="image/webp" media="(max-width: 767px)" fetchpriority="high" />
+
+    <script>
+      ;(function () {
+        var themes = ['neon', 'outrun', 'coldwave', 'crimson', 'phosphor', 'chrome', 'score']
+        try {
+          var t = localStorage.getItem('ns-theme')
+          var m = localStorage.getItem('ns-mode')
+          var el = document.documentElement
+          if (t && themes.indexOf(t) > -1) el.dataset.theme = t
+          if (m === 'light' || m === 'dark') {
+            el.dataset.mode = m
+            el.classList.toggle('dark', m === 'dark')
+          }
+        } catch (e) {}
+      })()
+    </script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://kineticgain.com/#organization",
+            "name": "Kinetic Gain LLC",
+            "url": "https://kineticgain.com"
+          },
+          {
+            "@type": "Person",
+            "@id": "https://github.com/mizcausevic-dev#person",
+            "name": "Miz Causevic",
+            "url": "https://github.com/mizcausevic-dev",
+            "sameAs": ["https://github.com/mizcausevic-dev"],
+            "worksFor": { "@id": "https://kineticgain.com/#organization" }
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://mizcausevic-dev.github.io/nocturnal-synthesis-midi-studio/#website",
+            "url": "https://mizcausevic-dev.github.io/nocturnal-synthesis-midi-studio/",
+            "name": "Nocturnal Synthesis",
+            "description": "Fifty validated synthwave and darkwave MIDI leads, auditioned in the browser.",
+            "publisher": { "@id": "https://kineticgain.com/#organization" }
+          },
+          {
+            "@type": "CreativeWork",
+            "@id": "https://mizcausevic-dev.github.io/nocturnal-synthesis-midi-studio/#pack",
+            "name": "Nocturnal Synthesis: 50 MIDI leads",
+            "description": "Fifty monophonic Standard MIDI File lead loops for synthwave, darkwave, coldwave, and cinematic scores, with an index CSV, a note-events CSV, a SHA-256 manifest, and a validation report.",
+            "url": "https://mizcausevic-dev.github.io/nocturnal-synthesis-midi-studio/",
+            "image": "https://mizcausevic-dev.github.io/nocturnal-synthesis-midi-studio/images/og-hero.jpg",
+            "encodingFormat": "audio/midi",
+            "isAccessibleForFree": true,
+            "inLanguage": "en",
+            "keywords": "synthwave MIDI, darkwave MIDI, free MIDI leads, coldwave MIDI, royalty-free MIDI",
+            "author": { "@id": "https://github.com/mizcausevic-dev#person" },
+            "publisher": { "@id": "https://kineticgain.com/#organization" },
+            "license": "https://github.com/mizcausevic-dev/nocturnal-synthesis-midi-studio/blob/main/LICENSE-PATTERNS.md"
+          }
+        ]
+      }
+    </script>
   </head>
-  <body class="bg-[#0B0C10] text-[#C5C6C7] antialiased selection:bg-[#FF2D55] selection:text-white">
+  <body>
+    <noscript>
+      <p style="margin: 0; padding: 0.8rem 1rem; background: #1a1020; color: #f4efe8; font-family: system-ui, sans-serif">
+        The pattern lab needs JavaScript to play audio. You can still
+        <a href="./synthwave_darkwave_50_midi_leads.zip" style="color: #ff4fa8">download the pack directly</a>.
+      </p>
+    </noscript>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>

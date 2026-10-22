@@ -48,7 +48,7 @@ PATTERNS_PART2: List[Dict] = [
             n(9.0, 0.5, "B4", 116),
             n(9.75, 0.5, "A#4", 120),  # Intentional tritone Bb4 (A#4)
             n(10.5, 0.75, "B4", 114),
-            # Bar 4 (Dm - vii)
+            # Bar 4 (Dm - bvii)
             n(12.0, 0.5, "D5", 116),
             n(12.75, 0.25, "A4", 106),
             n(13.5, 0.75, "F4", 112),
@@ -232,7 +232,7 @@ PATTERNS_PART2: List[Dict] = [
             n(4.0, 1.0, "F#5", 122, extra_ticks=30),
             n(5.0, 0.75, "D5", 114),
             n(6.5, 0.5, "A4", 106),
-            # Bar 3 (Bm - vii)
+            # Bar 3 (Bm - bvii)
             n(8.0, 0.25, "B4", 110, extra_ticks=30),
             n(8.25, 1.0, "F#5", 120),
             n(9.5, 0.5, "D5", 112),
