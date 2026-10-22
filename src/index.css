@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  ::before,
+  ::after {
+    transition-duration: 0.001ms !important;
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(102, 252, 241, 0.28);
+  border-radius: 99px;
+}
+::-webkit-scrollbar-track {
+  background: #0b0c10;
+}
