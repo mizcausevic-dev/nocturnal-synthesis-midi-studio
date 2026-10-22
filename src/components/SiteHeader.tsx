@@ -90,9 +90,16 @@ export function SiteHeader({ home = true }: { home?: boolean }) {
         {home ? 'Skip to the pattern lab' : 'Skip to the article'}
       </a>
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between gap-4 px-4 sm:px-6 lg:px-8">
-        <a href={home ? '#top' : './'} className="flex items-center gap-2.5 font-semibold tracking-tight">
-          <Logo className="size-8" />
-          <span>Nocturnal Synthesis</span>
+        <a href={home ? '#top' : './'} className="flex min-w-0 items-center gap-2.5 font-semibold tracking-tight">
+          <Logo className="size-8 shrink-0" />
+          <span className="text-sm leading-tight sm:text-base">
+            <span className="sm:hidden">
+              Nocturnal
+              <br />
+              Synthesis
+            </span>
+            <span className="hidden sm:inline">Nocturnal Synthesis</span>
+          </span>
         </a>
         <nav aria-label="Sections" className="hidden items-center gap-1 lg:flex">
           {NAV.map((n) => (

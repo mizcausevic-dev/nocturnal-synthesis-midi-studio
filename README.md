@@ -33,6 +33,8 @@ npm ci && node scripts/validate-tonejs.mjs
 
 `npm run validate:midi` runs the builder, both validators, and the standalone HTML dashboards. A clean rebuild matches the committed ZIP and every hash in `manifest.json`.
 
+`npm run test:e2e` drives the lab in headless Chrome at `http://127.0.0.1:43123`. `scripts/deploy-gh-pages.sh` rebuilds `dist/`, refuses any file that is not a web asset, and publishes the `gh-pages` branch.
+
 ## Layout
 
 | Path | What it is |

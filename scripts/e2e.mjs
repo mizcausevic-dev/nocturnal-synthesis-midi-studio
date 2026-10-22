@@ -56,7 +56,7 @@ await page.keyboard.press('j')
 await lab.getByRole('heading', { level: 3, name: 'Chrome Horizon' }).waitFor()
 check('J steps back', true)
 
-await page.getByRole('button', { name: 'Cold Signals' }).click()
+await page.getByRole('group', { name: 'Filter by group' }).getByRole('button', { name: 'Cold Signals', exact: true }).click()
 await page.getByText('Showing 10 of 50 patterns').waitFor()
 check('group filter', true)
 await page.getByRole('button', { name: 'Reset filters' }).click()

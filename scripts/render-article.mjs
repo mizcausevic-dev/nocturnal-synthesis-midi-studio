@@ -14,6 +14,13 @@ const IMAGE_SIZE = {
   'images/hero-night-drive.webp': [1280, 720],
 }
 
+function displayDate(iso) {
+  const match = /^(\d{4})-(\d{2})-(\d{2})$/.exec(iso)
+  if (!match) return iso
+  const date = new Date(Date.UTC(Number(match[1]), Number(match[2]) - 1, Number(match[3])))
+  return new Intl.DateTimeFormat('en-US', { month: 'long', day: 'numeric', year: 'numeric', timeZone: 'UTC' }).format(date)
+}
+
 function escapeHtml(value) {
   return String(value)
     .replaceAll('&', '&amp;')
@@ -180,7 +187,7 @@ export function loadArticle() {
   </nav>
   <article id="article">
     <header class="article-header">
-      <p class="eyebrow">The long read · ${escapeHtml(date)}</p>
+      <p class="eyebrow">The long read · ${escapeHtml(displayDate(date))}</p>
       <h1>${escapeHtml(title)}</h1>
       <p class="article-dek">${escapeHtml(description)}</p>
       <p class="article-byline">${readMinutes} min read · ${words.toLocaleString('en-US')} words · <a href="https://github.com/mizcausevic-dev">Miz Causevic</a></p>
