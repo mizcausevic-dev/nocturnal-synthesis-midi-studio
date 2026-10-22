@@ -1,0 +1,199 @@
+{
+  "pack": "Nocturnal Synthesis",
+  "version": "1.1.0",
+  "generated_utc": "2026-10-22 18:15 UTC",
+  "generator": "scripts/validate.py",
+  "tools": {
+    "python": "3.12.3",
+    "mido": "1.3.3",
+    "tonejs_midi": "2.0.28",
+    "node": "v22.23.4"
+  },
+  "summary": {
+    "files": 50,
+    "notes": 1024,
+    "checks_total": 19,
+    "checks_passed": 19,
+    "failed": 0,
+    "parsers": [
+      "mido",
+      "@tonejs/midi"
+    ]
+  },
+  "checks": [
+    {
+      "id": "files",
+      "title": "Exactly 50 MIDI files with matching IDs across files and both CSVs",
+      "passed": true,
+      "detail": "50 files, 50 index rows, 1024 note-event rows",
+      "problems": [],
+      "problem_count": 0
+    },
+    {
+      "id": "parse",
+      "title": "Every file parses with mido as Format 0, one track, 480 PPQ",
+      "passed": true,
+      "detail": "50/50 parsed with mido 1.3.3",
+      "problems": [],
+      "problem_count": 0
+    },
+    {
+      "id": "meta",
+      "title": "Track name, tempo, and 4/4 time signature at tick 0; integer BPM 85-130",
+      "passed": true,
+      "detail": "tempo compared within 0.01 BPM after microsecond rounding",
+      "problems": [],
+      "problem_count": 0
+    },
+    {
+      "id": "channel",
+      "title": "Channel 1 only; no program change, pitch bend, CC, aftertouch, or SysEx",
+      "passed": true,
+      "detail": "every channel message is an explicit note-on or note-off on channel 1",
+      "problems": [],
+      "problem_count": 0
+    },
+    {
+      "id": "pairing",
+      "title": "Explicit note-offs; every note-on paired; note-offs first on shared ticks",
+      "passed": true,
+      "detail": "note-on/off pairing re-done from the raw message stream, independent of the builder",
+      "problems": [],
+      "problem_count": 0
+    },
+    {
+      "id": "eot",
+      "title": "One end-of-track event, last in the file, exactly on the 2, 4, or 8-bar loop boundary",
+      "passed": true,
+      "detail": "no note crosses the boundary",
+      "problems": [],
+      "problem_count": 0
+    },
+    {
+      "id": "ranges",
+      "title": "Pitches 55-96, at least 90% in C4-C6 (60-84), velocities 1-127, notes inside the loop",
+      "passed": true,
+      "detail": "1024 notes, G3-F#6, 96.6% in the primary range",
+      "problems": [],
+      "problem_count": 0
+    },
+    {
+      "id": "legato",
+      "title": "Overlaps only in legato-labeled patterns: adjacent, different pitches, 1-60 ticks, max 2 voices",
+      "passed": true,
+      "detail": "29 legato patterns, 144 intentional overlaps, 21 patterns with none",
+      "problems": [],
+      "problem_count": 0
+    },
+    {
+      "id": "csv",
+      "title": "Note-event and index CSVs match the parsed MIDI exactly",
+      "passed": true,
+      "detail": "pitch, start tick, duration, velocity, note names (MIDI 60 = C4), and beats = ticks / 480",
+      "problems": [],
+      "problem_count": 0
+    },
+    {
+      "id": "romans",
+      "title": "One chord per bar, and every Roman numeral matches its chord under the documented convention",
+      "passed": true,
+      "detail": "218 bars; numerals re-derived from the parallel-major convention, not from a lookup table",
+      "problems": [],
+      "problem_count": 0
+    },
+    {
+      "id": "scale",
+      "title": "Every out-of-scale melody note is listed in the index CSV",
+      "passed": true,
+      "detail": "56 out-of-scale note events, recomputed from tonal center + scale step patterns",
+      "problems": [],
+      "problem_count": 0
+    },
+    {
+      "id": "harmony",
+      "title": "Proxy: every pattern spends at least half its sounding time on tones of its reference chords",
+      "passed": true,
+      "detail": "lowest is 038 at 60%; this is a proxy, not a listening test",
+      "problems": [],
+      "problem_count": 0
+    },
+    {
+      "id": "duplicates",
+      "title": "No exact, transposed, re-velocitied, or re-tempoed duplicates",
+      "passed": true,
+      "detail": "1,225 pairs compared ignoring velocity and tempo; rhythm-and-duration twins: 0",
+      "problems": [],
+      "problem_count": 0
+    },
+    {
+      "id": "near",
+      "title": "No near-duplicates by onset, pitch-class, or interval similarity",
+      "passed": true,
+      "detail": "closest onset+pitch-class 031/035 Jaccard 0.18; closest onset+interval 035/039 0.22; closest onset grids 011/015 0.76; fail threshold 0.85",
+      "problems": [],
+      "problem_count": 0
+    },
+    {
+      "id": "subloop",
+      "title": "No pattern is a shorter loop repeated unchanged, inside itself or across the pack",
+      "passed": true,
+      "detail": "halves compared for exact and transposed repeats; every longer loop compared with every shorter one tiled",
+      "problems": [],
+      "problem_count": 0
+    },
+    {
+      "id": "structure",
+      "title": "Five groups of ten in ID order; 2, 4, and 8-bar loops all present",
+      "passed": true,
+      "detail": "groups Neon Hooks 10, Midnight Sequences 10, Cold Signals 10, Haunted Melodies 10, Cinematic Flight 10; bars 2-bar 5, 4-bar 38, 8-bar 7",
+      "problems": [],
+      "problem_count": 0
+    },
+    {
+      "id": "determinism",
+      "title": "A clean rebuild is byte-identical, and every SHA-256 in manifest.json matches",
+      "passed": true,
+      "detail": "56 files rebuilt in a temp folder and hashed, ZIP included; 54 manifest entries verified",
+      "problems": [],
+      "problem_count": 0
+    },
+    {
+      "id": "zip",
+      "title": "ZIP passes its CRC test and every member is byte-identical to the validated files",
+      "passed": true,
+      "detail": "synthwave_darkwave_50_midi_leads.zip, 55 members, 38,897 bytes; the site serves the same bytes",
+      "problems": [],
+      "problem_count": 0
+    },
+    {
+      "id": "tonejs",
+      "title": "A second parser, @tonejs/midi, reads the same notes, tempo, meter, and loop end as the CSVs",
+      "passed": true,
+      "detail": "50 files, 1024 notes compared with @tonejs/midi 2.0.28 on Node v22.23.4",
+      "problems": [],
+      "problem_count": 0
+    }
+  ],
+  "second_parser": {
+    "name": "@tonejs/midi",
+    "version": "2.0.28",
+    "runtime": "Node v22.23.4",
+    "files": 50,
+    "notes_compared": 1024,
+    "problems": 0,
+    "compared_fields": "PPQ, tempo, 4/4 time signature, track name, channel, end-of-track tick, and every note (pitch, start tick, duration, velocity, name)"
+  },
+  "limitations": [
+    "Musical quality, memorability, and how a line sits in a mix are judgments. The chord-tone share is a proxy, not a listening test.",
+    "Glide on legato overlaps depends on the receiving synth's mono legato mode and portamento; it cannot be verified from MIDI.",
+    "The files were not imported into commercial DAWs in this environment. They were parsed with mido and @tonejs/midi.",
+    "The browser preview synth is a sketch of each suggested sound, not the suggested patch itself.",
+    "Near-duplicate detection compares onset, pitch-class, and interval token sets; it cannot judge perceived similarity."
+  ],
+  "reproduce": [
+    "python3 scripts/build_pack.py          # stdlib only, writes midi/, CSVs, manifest, ZIP",
+    "pip install -r scripts/requirements.txt  # mido 1.3.3",
+    "python3 scripts/validate.py            # mido checks, writes validation_report.json",
+    "npm ci && node scripts/validate-tonejs.mjs  # second parser"
+  ]
+}

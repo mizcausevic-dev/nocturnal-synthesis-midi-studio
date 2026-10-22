@@ -11,14 +11,25 @@ Web Audio API dry/FX synth audition engine, interactive Canvas piano roll, 10-po
 definition, and 7-theme picker (with light/dark mode and localStorage persistence).
 """
 
+import csv
 import json
-import shutil
 from pathlib import Path
 
 
 def build_standalone_dashboard():
-    base = Path("/workspace")
-    payload = json.loads((base / "src" / "data" / "patterns.json").read_text(encoding="utf-8"))
+    base = Path(__file__).resolve().parent.parent
+    payload = json.loads((base / "public" / "data" / "patterns.json").read_text(encoding="utf-8"))
+    notes_by_id = {}
+    with open(base / "midi_note_events.csv", encoding="utf-8") as f:
+        for r in csv.DictReader(f):
+            notes_by_id.setdefault(r["pattern_id"], []).append({
+                "midi": int(r["midi_note_number"]),
+                "startTick": int(r["start_tick"]),
+                "durationTicks": int(r["duration_ticks"]),
+                "velocity": int(r["velocity"]),
+            })
+    for p in payload["patterns"]:
+        p["notes"] = notes_by_id[p["id"]]
     arch_svg = (base / "public" / "images" / "architecture_diagram.svg").read_text(encoding="utf-8")
     mindmap_svg = (base / "public" / "images" / "collection_mindmap.svg").read_text(encoding="utf-8")
 

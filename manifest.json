@@ -1,0 +1,284 @@
+{
+  "pack": "Nocturnal Synthesis",
+  "version": "1.1.0",
+  "conventions": {
+    "format": "Standard MIDI File, Format 0, 1 track",
+    "ppq": 480,
+    "time_signature": "4/4",
+    "channel": 1,
+    "pitch_reference": "MIDI 60 = C4",
+    "beats": "zero-based quarter notes"
+  },
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 5450,
+      "sha256": "6e52c3ca008b084d3f4734d473415eaf1d31396c44b4930de2f89fd99f6184d9"
+    },
+    {
+      "path": "LICENSE-PATTERNS.md",
+      "bytes": 978,
+      "sha256": "527fd529d45c41b33ece705966e3bf69db46a2437c11abc875fc32b967c497f4"
+    },
+    {
+      "path": "midi_patterns_index.csv",
+      "bytes": 21932,
+      "sha256": "ede250e870784844d0f97b1629080d9017ea820c551f393130fe8c90664971e0"
+    },
+    {
+      "path": "midi_note_events.csv",
+      "bytes": 33464,
+      "sha256": "00dca4ddd54a1e4087801cdb0f8f4747a44f80ffa4eb806b7e68f2c2113cd2e1"
+    },
+    {
+      "path": "midi/001_chrome_horizon.mid",
+      "bytes": 269,
+      "sha256": "0ca5dc5ff7a6af7e9d5b05dd21911f5c6b5e92c9dc770f66ff01f03cced5280a"
+    },
+    {
+      "path": "midi/002_sunset_overdrive.mid",
+      "bytes": 280,
+      "sha256": "210caf65a5a802a296ef7b0f6bf6361e38d1666ffc253dc4c2a5fb7a2ae47a83"
+    },
+    {
+      "path": "midi/003_turbo_interceptor.mid",
+      "bytes": 257,
+      "sha256": "f06587c6d1265fadb23f4b29b2ea11ed9e550ca475085df670ae9079ce33d9c8"
+    },
+    {
+      "path": "midi/004_laser_grid_rendezvous.mid",
+      "bytes": 185,
+      "sha256": "52ce94a38638a14fd1362f2db530d876264f870f5ca3ba8e58e7f2d172612b17"
+    },
+    {
+      "path": "midi/005_magenta_arcade.mid",
+      "bytes": 263,
+      "sha256": "b6d429f161ff51bc61782b315e28cbba41516498ad8a25fd82173ac7bd6cf59e"
+    },
+    {
+      "path": "midi/006_vhs_heartbeat.mid",
+      "bytes": 217,
+      "sha256": "5f3835e77152f92dc583a7f079b9b4335778724e4736c283c281a08c644df230"
+    },
+    {
+      "path": "midi/007_starlight_boulevard.mid",
+      "bytes": 374,
+      "sha256": "2b7cb08181b1a8ddce37307a5ad4117e1cd9ad72a31fbd944767b954c0b698e5"
+    },
+    {
+      "path": "midi/008_electric_mirage.mid",
+      "bytes": 247,
+      "sha256": "ea3530cb5dabf8c31ac958461bad0588767173e4067c6cf6bf01993e43ace2fd"
+    },
+    {
+      "path": "midi/009_cassette_rewind.mid",
+      "bytes": 235,
+      "sha256": "6618fae8b4930969c750b93b9022939710179dfc802241e6c7d80d5091b8a6ac"
+    },
+    {
+      "path": "midi/010_cybernetic_lover.mid",
+      "bytes": 238,
+      "sha256": "ec58f3bce6c4c64e70921e568a513948e84e5a82e995650c8046fabc8ae46edb"
+    },
+    {
+      "path": "midi/011_grid_runner_pulse.mid",
+      "bytes": 354,
+      "sha256": "d58701f39760c51e0b98409bb65d498c8ce015352b7896d937556a2f3b1c619b"
+    },
+    {
+      "path": "midi/012_nocturne_telemetry.mid",
+      "bytes": 312,
+      "sha256": "dd09847edc513d0b00538e74b130d2531a84ff65be6327c97ce9a6576b90aeb8"
+    },
+    {
+      "path": "midi/013_sodium_vapor_arpeggio.mid",
+      "bytes": 287,
+      "sha256": "1d94e23b7ce60877d58b9775fc7000299dc6167a089ac2559a53528d72a504b9"
+    },
+    {
+      "path": "midi/014_clockwork_autobahn.mid",
+      "bytes": 328,
+      "sha256": "4a42934d3cedd8fbbc6b8985feaf8502c38197d0d4394f90cda48828d8976edd"
+    },
+    {
+      "path": "midi/015_phosphor_cascade.mid",
+      "bytes": 207,
+      "sha256": "3ce1037298de97c38ea65b43e37da74f40127930480c7130695c7cc82375116f"
+    },
+    {
+      "path": "midi/016_cyberdeck_uplink.mid",
+      "bytes": 283,
+      "sha256": "707a5afc602232b159fb51fa37f86e3498ad90890c1a49f3fe94a7080136bf84"
+    },
+    {
+      "path": "midi/017_velvet_tachometer.mid",
+      "bytes": 296,
+      "sha256": "3c15f3567c6a7523ad13c286c468e0a59511f79b4fbaa36c861d417ae66fbdce"
+    },
+    {
+      "path": "midi/018_orbital_relay.mid",
+      "bytes": 430,
+      "sha256": "dbc2e47f282fbd55f82a8dbcbb4013c36db7f3bea06c7b56c49ad3b8adbcfe29"
+    },
+    {
+      "path": "midi/019_shadow_transistor.mid",
+      "bytes": 286,
+      "sha256": "1b3f951c2e438f6dbcc8679105d8a8dbf2bb64229d0dae46cf934d0bc2f0d04e"
+    },
+    {
+      "path": "midi/020_neon_centrifuge.mid",
+      "bytes": 299,
+      "sha256": "716b672831dbfa198bbba1f5250b3a0228ed992ec591574e224ea3ed4c18764e"
+    },
+    {
+      "path": "midi/021_bunker_transmission.mid",
+      "bytes": 212,
+      "sha256": "e35c59051f774a9468dbc3cceda8e30cf971d6d9e28cb3d94039b719f4cadba8"
+    },
+    {
+      "path": "midi/022_geiger_counter_waltz.mid",
+      "bytes": 208,
+      "sha256": "3bf46747c10ec63c594fefd010313cb824996f42c9704c1d3265c364d2c3275d"
+    },
+    {
+      "path": "midi/023_dead_channel_09.mid",
+      "bytes": 140,
+      "sha256": "bcd77c4208d0222d2bf82532087be5890f430d09ba6938b0e9c3aece44625174"
+    },
+    {
+      "path": "midi/024_brutalist_concrete.mid",
+      "bytes": 227,
+      "sha256": "3e7c98219345a32359d9ea2c1b203a90f1357d88bc3fccf29e8a47e73051cac0"
+    },
+    {
+      "path": "midi/025_numbers_station.mid",
+      "bytes": 235,
+      "sha256": "d188ecd55e8fb54fa1ae751b49a2833918f55b444a8a71a3f9c355aaf921ace5"
+    },
+    {
+      "path": "midi/026_fluorescent_morgue.mid",
+      "bytes": 199,
+      "sha256": "5a71bdb481bcadd5c59ada64b45f9ffb59f18d6531630e7a49f030df574172b4"
+    },
+    {
+      "path": "midi/027_subzero_conduit.mid",
+      "bytes": 217,
+      "sha256": "a6924a7063894c493b6c1f9a98d3d8d943163dc3f312f0d1c016333c2b00360d"
+    },
+    {
+      "path": "midi/028_iron_curtain_echo.mid",
+      "bytes": 342,
+      "sha256": "490961680b84c5891ecce8e7fadf159feb24972e1c8c5889aceb1413c9c8ea54"
+    },
+    {
+      "path": "midi/029_null_pointer_pulse.mid",
+      "bytes": 159,
+      "sha256": "6bd67aacf269834dcfc5790077f2df4a4ad16d93a1c49b126883a25d9e9f1ae4"
+    },
+    {
+      "path": "midi/030_cryogenic_sleep.mid",
+      "bytes": 174,
+      "sha256": "de4a435ea3aa0fda007b78cbaae1b8b601c2d1ce57d3ee79dfa5610efc595acd"
+    },
+    {
+      "path": "midi/031_ghost_in_the_crt.mid",
+      "bytes": 193,
+      "sha256": "22da96bd2e5d0f90fc71d973d0bfcda3f67948673862084186a56bee379b088a"
+    },
+    {
+      "path": "midi/032_black_velvet_rain.mid",
+      "bytes": 194,
+      "sha256": "0978b0d422e8f75863d41a1f9e613cc4db1c184247da258b03c86a0693ab2342"
+    },
+    {
+      "path": "midi/033_sepulcher_of_glass.mid",
+      "bytes": 295,
+      "sha256": "238ec0545eab52adc123acace88fa45d91b44b8157877a3d117c4e57bc0b3e5a"
+    },
+    {
+      "path": "midi/034_last_train_from_wannsee.mid",
+      "bytes": 200,
+      "sha256": "215b49fe18b0d4a2239869438039047107462277aeb94558838765750985e70b"
+    },
+    {
+      "path": "midi/035_cathedral_of_static.mid",
+      "bytes": 178,
+      "sha256": "a285f027a790414559d6e859d6d623152cda4a99c69d50319540ab0e998b8107"
+    },
+    {
+      "path": "midi/036_porcelain_mask.mid",
+      "bytes": 207,
+      "sha256": "8bde7d48251d1c4abdd3078741fef1e2d4fe21bd5d476465741a568755231e0c"
+    },
+    {
+      "path": "midi/037_winter_on_the_spree.mid",
+      "bytes": 179,
+      "sha256": "4fe5c0f6fdd383f3b11784f9f0b50b31849e2eb0802d4b9fee01f7213fadbd8c"
+    },
+    {
+      "path": "midi/038_fading_polaroid.mid",
+      "bytes": 138,
+      "sha256": "d6a4189751b9e574ab7178046d9395f8b3b80e3594454d01a7d3faf689f1659b"
+    },
+    {
+      "path": "midi/039_nocturne_for_androids.mid",
+      "bytes": 280,
+      "sha256": "1b39a2d6d864d666b670cdc0bdb98fc406c886ed4bf890ee108cab1a4918a752"
+    },
+    {
+      "path": "midi/040_ashes_of_the_arcade.mid",
+      "bytes": 187,
+      "sha256": "acf2a21970a13344714c7f343008e69511369dbe2895759d4e17f834ce145c4b"
+    },
+    {
+      "path": "midi/041_stratosphere_burn.mid",
+      "bytes": 255,
+      "sha256": "1e93407313fa2aa6fda470d10a9fad1cc06a0ac01e59c502613717690a5c02af"
+    },
+    {
+      "path": "midi/042_valkyrie_vector.mid",
+      "bytes": 265,
+      "sha256": "25750828cba0a347c296f9164b641c70bc1650d53eceb9a5f862847965fffa0f"
+    },
+    {
+      "path": "midi/043_hyperdrive_ascent.mid",
+      "bytes": 405,
+      "sha256": "0eaf24da3dc8c5938061d43baff7306d434e088b3bb43f224cdd73d9180047e2"
+    },
+    {
+      "path": "midi/044_solar_flare_escape.mid",
+      "bytes": 283,
+      "sha256": "d9e1db5b79c44bdef70f955a960cfd0d006ad07cf25af651f78cc0e8cc7c5600"
+    },
+    {
+      "path": "midi/045_andromeda_crossing.mid",
+      "bytes": 222,
+      "sha256": "0d65ff49d026f339d1435899ef6e7b22b9bb42a24df8f207fc752cd244982a49"
+    },
+    {
+      "path": "midi/046_interceptor_afterburner.mid",
+      "bytes": 287,
+      "sha256": "4aea08a830da0a26df53a3b0eb731cee246bf593bd1a67f122524ecaff74724d"
+    },
+    {
+      "path": "midi/047_titan_skyway.mid",
+      "bytes": 227,
+      "sha256": "81883f47fbb1fd047cd8fefa0108157e7fe9bfa91eb252e2eca34ab129d68f8d"
+    },
+    {
+      "path": "midi/048_eclipse_over_neo_tokyo.mid",
+      "bytes": 253,
+      "sha256": "3ea20063f0fe3af8d1e493bcdf2a1f14ade6ed3d5954cc813663e5173a91ef7c"
+    },
+    {
+      "path": "midi/049_event_horizon_glide.mid",
+      "bytes": 223,
+      "sha256": "c04f35f6ca77c6a8064dc0d00505d2d78f88d84f2d5b692b8a1a1d33f5edd1d5"
+    },
+    {
+      "path": "midi/050_omega_dawn_finale.mid",
+      "bytes": 406,
+      "sha256": "f80c9ec74bb6838a96bf6c8f08d0188432e488d12f9fe31a3d8e18a6973cd741"
+    }
+  ]
+}
