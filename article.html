@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="en" data-theme="neon" data-mode="dark" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>50 Free Synthwave &amp; Darkwave Lead MIDI Files (Validated) | Nocturnal Synthesis</title>
+    <meta name="description" content="How one helper function, a standard-library Python builder, and two independent MIDI parsers produced 50 lead loops whose notes, chords, and numerals you can check before they reach your DAW." />
+    <link rel="canonical" href="https://mizcausevic-dev.github.io/nocturnal-synthesis-midi-studio/article.html" />
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <meta name="theme-color" content="#08070f" />
+    <meta name="color-scheme" content="dark light" />
+    <meta name="author" content="Miz Causevic" />
+    <meta name="keywords" content="synthwave MIDI, darkwave MIDI, free MIDI leads, synthwave lead melody, coldwave MIDI, royalty-free MIDI" />
+
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="Nocturnal Synthesis" />
+    <meta property="og:title" content="50 Free Synthwave and Darkwave MIDI Leads, Built Like Software" />
+    <meta property="og:description" content="How one helper function, a standard-library Python builder, and two independent MIDI parsers produced 50 lead loops whose notes, chords, and numerals you can check before they reach your DAW." />
+    <meta property="og:url" content="https://mizcausevic-dev.github.io/nocturnal-synthesis-midi-studio/article.html" />
+    <meta property="article:published_time" content="2026-10-22" />
+    <meta property="article:modified_time" content="2026-10-22" />
+    <meta property="article:author" content="Miz Causevic" />
+    <meta property="og:image" content="https://mizcausevic-dev.github.io/nocturnal-synthesis-midi-studio/images/og-hero.jpg" />
+    <meta property="og:image:width" content="1280" />
+    <meta property="og:image:height" content="720" />
+    <meta property="og:image:alt" content="A modular synthesizer by a rainy window, with a glowing piano roll floating over a neon city" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="50 Free Synthwave and Darkwave MIDI Leads, Built Like Software" />
+    <meta name="twitter:description" content="How one helper function, a standard-library Python builder, and two independent MIDI parsers produced 50 lead loops whose notes, chords, and numerals you can check before they reach your DAW." />
+    <meta name="twitter:image" content="https://mizcausevic-dev.github.io/nocturnal-synthesis-midi-studio/images/og-hero.jpg" />
+
+    <script>
+      ;(function () {
+        var themes = ['neon', 'outrun', 'coldwave', 'crimson', 'phosphor', 'chrome', 'score']
+        try {
+          var t = localStorage.getItem('ns-theme')
+          var m = localStorage.getItem('ns-mode')
+          var el = document.documentElement
+          if (t && themes.indexOf(t) > -1) el.dataset.theme = t
+          if (m === 'light' || m === 'dark') {
+            el.dataset.mode = m
+            el.classList.toggle('dark', m === 'dark')
+          }
+        } catch (e) {}
+      })()
+    </script>
+    <script type="application/ld+json">
+      {"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Nocturnal Synthesis","item":"https://mizcausevic-dev.github.io/nocturnal-synthesis-midi-studio/"},{"@type":"ListItem","position":2,"name":"50 Free Synthwave and Darkwave MIDI Leads, Built Like Software","item":"https://mizcausevic-dev.github.io/nocturnal-synthesis-midi-studio/article.html"}]},{"@type":"Article","@id":"https://mizcausevic-dev.github.io/nocturnal-synthesis-midi-studio/article.html#article","headline":"50 Free Synthwave and Darkwave MIDI Leads, Built Like Software","description":"How one helper function, a standard-library Python builder, and two independent MIDI parsers produced 50 lead loops whose notes, chords, and numerals you can check before they reach your DAW.","datePublished":"2026-10-22","dateModified":"2026-10-22","inLanguage":"en","image":"https://mizcausevic-dev.github.io/nocturnal-synthesis-midi-studio/images/og-hero.jpg","mainEntityOfPage":"https://mizcausevic-dev.github.io/nocturnal-synthesis-midi-studio/article.html","wordCount":3037,"keywords":"synthwave MIDI, darkwave MIDI, free MIDI leads, synthwave lead melody, coldwave MIDI, outrun MIDI pack, royalty-free MIDI","author":{"@id":"https://github.com/mizcausevic-dev#person"},"publisher":{"@id":"https://kineticgain.com/#organization"},"isPartOf":{"@id":"https://mizcausevic-dev.github.io/nocturnal-synthesis-midi-studio/#website"}},{"@type":"FAQPage","@id":"https://mizcausevic-dev.github.io/nocturnal-synthesis-midi-studio/article.html#faq","mainEntity":[{"@type":"Question","name":"Can I use these MIDI files in commercial releases?","acceptedAnswer":{"@type":"Answer","text":"Yes. The patterns are royalty-free in your own music, including commercial releases, film, games, and streams, and no credit is required. You may not resell or redistribute the files themselves, upload them to sample or MIDI sites, or train machine-learning models on them without written permission. The full terms are in LICENSE-PATTERNS.md."}},{"@type":"Question","name":"What tempo and key are the files in?","acceptedAnswer":{"@type":"Answer","text":"Each file has one integer tempo between 85 and 130 BPM, stored in its tempo event and listed in the index CSV. The pack covers ten tonal centers in natural minor, Dorian, harmonic minor, and Phrygian."}},{"@type":"Question","name":"Do the files include chords, bass, or drums?","acceptedAnswer":{"@type":"Answer","text":"No. Each file is a single monophonic lead line on channel 1. The reference chords, one per bar, are in the index CSV and the README. The browser lab can play reference chords and drums so you can hear each lead in context."}},{"@type":"Question","name":"Why are there no CC, pitch-bend, or program-change messages?","acceptedAnswer":{"@type":"Answer","text":"So the files behave the same on every synth. Sound, glide, and modulation belong to your patch. The suggested sound for each pattern is written in the index CSV, and it is never encoded in the MIDI."}},{"@type":"Question","name":"Will the files work in Ableton Live, FL Studio, Logic, or Bitwig?","acceptedAnswer":{"@type":"Answer","text":"They are standard Format 0 MIDI files that two independent parsers read identically, which is what DAWs expect. They were not tested inside those DAWs in this environment. If one misreads a file, please open an issue on GitHub."}},{"@type":"Question","name":"What does bVI mean in the chord column?","acceptedAnswer":{"@type":"Answer","text":"It is the major chord built on the lowered sixth degree. In A minor that is F major. The numerals are measured from the parallel major scale, so a flat sign means the root sits a semitone below that major-scale degree."}}]}]}
+    </script>
+    <script type="module" crossorigin src="./assets/article-BJnd0uzz.js"></script>
+    <link rel="modulepreload" crossorigin href="./assets/SiteHeader-D_uOcnZ3.js">
+    <link rel="stylesheet" crossorigin href="./assets/SiteHeader-CD_SEJi1.css">
+  </head>
+  <body>
+    <div id="site-header"></div>
+    <main>
+      <div class="article-shell">
+  <nav class="article-toc" aria-label="On this page">
+    <p class="eyebrow">On this page</p>
+    <ol>
+      <li><a href="#why-a-lead-has-to-work-with-the-delay-off">Why a lead has to work with the delay off</a></li>
+<li><a href="#what-is-in-the-pack">What is in the pack</a></li>
+<li><a href="#five-groups-five-jobs">Five groups, five jobs</a></li>
+<li><a href="#one-chord-per-bar-and-numerals-you-can-check">One chord per bar, and numerals you can check</a></li>
+<li><a href="#legato-that-a-mono-synth-can-actually-use">Legato that a mono synth can actually use</a></li>
+<li><a href="#from-a-line-of-python-to-a-midi-file">From a line of Python to a MIDI file</a></li>
+<li><a href="#how-the-files-were-checked">How the files were checked</a></li>
+<li><a href="#what-the-checks-cannot-tell-you">What the checks cannot tell you</a></li>
+<li><a href="#how-to-use-the-pack-in-your-daw">How to use the pack in your DAW</a></li>
+<li><a href="#faq">FAQ</a></li>
+<li><a href="#get-the-pack">Get the pack</a></li>
+    </ol>
+  </nav>
+  <article id="article">
+    <header class="article-header">
+      <p class="eyebrow">The long read · October 22, 2026</p>
+      <h1>50 Free Synthwave and Darkwave MIDI Leads, Built Like Software</h1>
+      <p class="article-dek">How one helper function, a standard-library Python builder, and two independent MIDI parsers produced 50 lead loops whose notes, chords, and numerals you can check before they reach your DAW.</p>
+      <p class="article-byline">14 min read · 3,037 words · <a href="https://github.com/mizcausevic-dev">Miz Causevic</a></p>
+      <img src="images/hero_nocturnal_synthesis.webp" alt="A modular synthesizer by a rainy window, with a glowing piano roll floating over a neon city" width="1280" height="720" fetchpriority="high" decoding="async" />
+    </header>
+    <div class="prose">
+      <p>Most free MIDI packs ask you to trust them. You download a folder, drag a clip into the arrangement, and find out on playback whether the notes fit the chords the file name promised, whether the loop ends where it should, and whether that &quot;legato&quot; line is two notes overlapping or a stuck note.</p>
+<p>Nocturnal Synthesis takes the other approach. It is a pack of 50 monophonic lead loops for synthwave, darkwave, coldwave, and dark cinematic work, and every claim about the files is written down next to them and checked by code that did not write them.</p>
+<p><strong>The short version</strong></p>
+<ul>
+<li>50 Standard MIDI Files: Format 0, 480 PPQ, 4/4, one integer tempo each from 85 to 130 BPM, channel 1 only.</li>
+<li>1,024 notes across 218 bars, in 2-, 4-, and 8-bar loops.</li>
+<li>One reference chord per bar, each with a Roman numeral that the validator re-derives from the chord itself.</li>
+<li>19 of 19 checks passed, including a second, independent MIDI parser.</li>
+<li>Royalty-free in your own music. The ZIP is about 38 KB, and you can <a href="./#lab">audition every file in the browser lab</a> before you download it.</li>
+</ul>
+<h2 id="why-a-lead-has-to-work-with-the-delay-off">Why a lead has to work with the delay off</h2>
+<p>A synthwave lead usually reaches the listener through a stack of effects: detuned oscillators, chorus, a dotted-eighth delay, a long plate reverb. Those effects are the genre&#39;s signature, and they are also a trap. A weak line can sound finished when it is buried in its own echoes. Turn the delay off and it falls apart, because nothing in the rhythm or the contour was holding it up.</p>
+<p>So every pattern in the pack was written to stand up dry, as plain notes on a single mono voice. That came down to three rules, and each one is measured rather than asserted.</p>
+<p><strong>A rhythm you could tap on a table.</strong> The hook in 001 Chrome Horizon is recognizable from its rhythm alone: an eighth-note A4, a jump to A5 that is held across the beat, then a quick fall through G5 and E5. The pack scores syncopation per note: an onset on the beat counts 0, an offbeat eighth counts 0.5, and anything on a sixteenth counts 1. Neon Hooks average 0.54. Haunted Melodies average 0.30, because a slow elegy should land closer to the beat.</p>
+<p><strong>Chord tones where the ear checks.</strong> Beats 1 and 3 are where a listener hears whether a melody agrees with the harmony. The pack tracks two numbers: the share of each pattern&#39;s sounding time spent on tones of its reference chords, and the share of beat-1 and beat-3 notes that are chord tones. The first ranges from 60% (038 Fading Polaroid, a deliberately tense two-bar loop built on a major-seventh appoggiatura) to 100% (030 Cryogenic Sleep). Every pattern clears 50%. That is a proxy for &quot;fits the chords&quot;, not proof that the line is good.</p>
+<p><strong>Silence is part of the line.</strong> Cold Signals leave 53% of each loop silent on average. That space is what makes a clipped coldwave phrase read as a signal instead of noise, and it is where your delay will live later.</p>
+<h2 id="what-is-in-the-pack">What is in the pack</h2>
+<p>The 50 patterns are split into five groups of ten. Each group has a job, and the numbers show the difference.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Group</th>
+<th>IDs</th>
+<th>Tempo</th>
+<th>Notes per bar</th>
+<th>Legato patterns</th>
+<th>Job</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Neon Hooks</td>
+<td>001–010</td>
+<td>98–124 BPM</td>
+<td>5.2</td>
+<td>7 of 10</td>
+<td>Immediate motifs with a clear rhythmic identity</td>
+</tr>
+<tr>
+<td>Midnight Sequences</td>
+<td>011–020</td>
+<td>112–128 BPM</td>
+<td>6.7</td>
+<td>4 of 10</td>
+<td>Pulsing, arpeggio-inspired figures that stay in the lead role</td>
+</tr>
+<tr>
+<td>Cold Signals</td>
+<td>021–030</td>
+<td>86–116 BPM</td>
+<td>4.0</td>
+<td>2 of 10</td>
+<td>Minimal, angular phrases with clipped articulation and space</td>
+</tr>
+<tr>
+<td>Haunted Melodies</td>
+<td>031–040</td>
+<td>85–100 BPM</td>
+<td>3.4</td>
+<td>9 of 10</td>
+<td>Sustained minor-key themes and bittersweet resolutions</td>
+</tr>
+<tr>
+<td>Cinematic Flight</td>
+<td>041–050</td>
+<td>114–130 BPM</td>
+<td>5.0</td>
+<td>7 of 10</td>
+<td>Wider intervals, rising tension, longer development</td>
+</tr>
+</tbody></table></div>
+<p><img src="images/synthwave_vs_darkwave_duality.webp" alt="Split illustration: a warm neon horizon grid for synthwave on the left, a cold green oscilloscope bunker for darkwave on the right" width="1280" height="720" loading="lazy" decoding="async" /></p>
+<p>The pack covers ten tonal centers. Thirty-one patterns are in natural minor, seven in Dorian, seven in harmonic minor, and five in Phrygian. There are five two-bar loops, 38 four-bar loops, and seven eight-bar loops.</p>
+<p>Pitches run from G3 to F#6, and 96.6% of all notes sit between C4 and C6 (MIDI 60 to 84). That is the register where a lead clears the bass and pad without fighting a vocal. Fourteen patterns climb above C6 for a peak, most of them in Cinematic Flight.</p>
+<p>Velocities run from 94 to 127. Notes at 115 or above are accents, and the browser lab draws them brighter, so you can see the phrasing before you hear it.</p>
+<p>The ZIP also contains a pattern index CSV (key, scale, chords, numerals, motif, suggested sound), a note-event CSV with one row per note, a README with every convention, a SHA-256 manifest, and the license.</p>
+<h2 id="five-groups-five-jobs">Five groups, five jobs</h2>
+<h3 id="neon-hooks-the-chorus-you-hum-on-the-drive-home">Neon Hooks: the chorus you hum on the drive home</h3>
+<p>001 Chrome Horizon runs i–bVI–bIII–bVII, which in A minor is Am, F, C, G. The major chord on the lowered seventh is the sound of an outrun chorus: it lifts instead of pulling home. 003 Turbo Interceptor moves to E Dorian and puts the raised sixth, C#5, over the IV chord in bar 3. That one note is why Dorian sounds brighter than natural minor, and the pattern makes you hear it.</p>
+<h3 id="midnight-sequences-motion-that-stays-a-melody">Midnight Sequences: motion that stays a melody</h3>
+<p>This is the busiest group, at 6.7 notes per bar on average, and 011 Grid Runner Pulse reaches 8.25. The risk with a sequenced lead is that it turns into an arpeggiator and stops being a tune. These patterns keep an anchor. 013 Sodium Vapor Arpeggio separates its sixteenth-note bursts with sustained target notes and spends 91.5% of its sounding time on chord tones. 016 Cyberdeck Uplink shifts to D Phrygian: i–bII–bvii–i, or Dm, Eb, Cm, Dm.</p>
+<h3 id="cold-signals-clipped-angular-spacious">Cold Signals: clipped, angular, spacious</h3>
+<p>Cold Signals have the widest average interval in the pack, 4.4 semitones between consecutive notes. 021 Bunker Transmission, in E Phrygian at 96 BPM, uses staccato eighths and wide leaps like a transmission cutting in and out. 027 Subzero Conduit traces F harmonic minor over Fm, Db, Gdim, C (i–bVI–ii°–V). Only two of the ten use legato. Cold means detached.</p>
+<h3 id="haunted-melodies-slow-sustained-minor">Haunted Melodies: slow, sustained, minor</h3>
+<p>At 85 to 100 BPM and 3.4 notes per bar, this is the slowest and most legato group: nine of the ten patterns use overlaps. 037 Winter on the Spree keeps its v chord minor (F#m in B minor), so the cadence never brightens. 039 Nocturne for Androids is eight bars in C# minor and puts a bII chord, D major, right before the final V. That Neapolitan color is the most cinematic move in the group.</p>
+<h3 id="cinematic-flight-wider-higher-longer">Cinematic Flight: wider, higher, longer</h3>
+<p>This is the fastest group, averaging 122 BPM, and it carries ten of the fourteen peaks above C6. 043 Hyperdrive Ascent spans two full octaves, F#4 to F#6, across eight bars at the pack&#39;s top tempo of 130 BPM. 049 Event Horizon Glide has the highest floor in the pack: it never drops below F5 and peaks at E6. 050 Omega Dawn Finale closes the collection in A harmonic minor with i–bVI–iv–V–i–bVI–ii°–V.</p>
+<h2 id="one-chord-per-bar-and-numerals-you-can-check">One chord per bar, and numerals you can check</h2>
+<p>Every bar has one reference chord. The chords are not in the MIDI files. They live in the index CSV and the README, so you can play them under the lead, revoice them, or ignore them.</p>
+<p>The Roman numerals follow one documented convention. Each numeral is measured from the parallel major scale: uppercase is a major chord, lowercase is minor, ° is diminished, and a flat sign lowers the root a semitone below that major-scale degree. In A minor, that gives:</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Numeral</th>
+<th>Chord in A minor</th>
+<th>Role</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>i</td>
+<td>Am</td>
+<td>Tonic</td>
+</tr>
+<tr>
+<td>bVI</td>
+<td>F</td>
+<td>Lowered sixth, major</td>
+</tr>
+<tr>
+<td>bIII</td>
+<td>C</td>
+<td>Relative major</td>
+</tr>
+<tr>
+<td>bVII</td>
+<td>G</td>
+<td>Lowered seventh, major</td>
+</tr>
+<tr>
+<td>iv</td>
+<td>Dm</td>
+<td>Minor subdominant</td>
+</tr>
+<tr>
+<td>V</td>
+<td>E</td>
+<td>Major dominant, borrowed from harmonic minor</td>
+</tr>
+<tr>
+<td>IV</td>
+<td>D</td>
+<td>Major subdominant, the Dorian color</td>
+</tr>
+<tr>
+<td>bII</td>
+<td>Bb</td>
+<td>Phrygian or Neapolitan second</td>
+</tr>
+<tr>
+<td>bvii</td>
+<td>Gm</td>
+<td>Lowered seventh, minor (Phrygian)</td>
+</tr>
+<tr>
+<td>ii°</td>
+<td>Bdim</td>
+<td>Diminished supertonic</td>
+</tr>
+</tbody></table></div>
+<p>Across all 218 bars, the counts are i 64, bVI 50, V 37, iv 22, bIII 13, bVII 10, IV 8, bII 6, bvii 3, ii° 3, and v 2. The bVI chord appears in 44 of the 50 patterns, and a major V appears in 32. The most common opening is i–bVI–iv–V, which starts 10 of the 45 loops that run four bars or longer.</p>
+<p>One correction deserves a plain statement. An earlier build of this pack labeled the minor chord on the lowered seventh as vii in three Phrygian patterns (016, 021, and 026). Under the convention above, that chord is bvii, because its root sits a semitone below the major scale&#39;s seventh degree. The validator no longer checks numerals against a lookup table. It re-derives every numeral from the chord&#39;s root and quality, so a mislabeled chord now fails the build.</p>
+<p>Notes outside the declared scale are listed, not hidden. There are 56 of them across 35 patterns: the raised leading tone over a major V, a Dorian sixth borrowed into natural minor, a chromatic passing tone. The index CSV lists every out-of-scale pitch for each pattern by name and MIDI number.</p>
+<h2 id="legato-that-a-mono-synth-can-actually-use">Legato that a mono synth can actually use</h2>
+<p>In 29 patterns labeled legato, some adjacent notes overlap on purpose, 144 times in total. Each overlap lasts 25 to 45 ticks, which is shorter than a 32nd note at 480 PPQ. An overlap always joins two different pitches, and never more than two notes sound at once.</p>
+<p>On a mono synth with legato or fingered portamento switched on, that overlap is the cue to glide into the next note instead of retriggering the envelope. On a polyphonic patch you will hear, at most, a very short two-note blur. The other 21 patterns have no overlaps at all: every note ends at or before the next one begins.</p>
+<p>If you want the intended effect, set the synth to mono legato (often called fingered) mode and add 15 to 45 milliseconds of portamento. Glide behavior depends on the synth, which is why it is a suggestion in the README and not something the MIDI can enforce.</p>
+<h2 id="from-a-line-of-python-to-a-midi-file">From a line of Python to a MIDI file</h2>
+<p>Nothing in the pack was drawn in a piano roll. Each note is one call to a small helper, <code>n(beat, dur_beats, note, velocity, shift_ticks=0, extra_ticks=0)</code>. This is bar 1 of 001 Chrome Horizon, exactly as it appears in the source:</p>
+<pre><code class="language-python"># Bar 1 (Am): Iconic octave leap A4 -&gt; A5 with 35-tick legato into G5
+n(0.0, 0.5, &quot;A4&quot;, 104),
+n(0.5, 1.0, &quot;A5&quot;, 118, extra_ticks=35),
+n(1.5, 0.5, &quot;G5&quot;, 106),
+n(2.0, 0.75, &quot;E5&quot;, 110),
+n(2.75, 0.5, &quot;D5&quot;, 98),
+n(3.25, 0.5, &quot;E5&quot;, 104),
+</code></pre>
+<p>Beats become ticks at 480 per quarter note, so beat 0.5 is tick 240. On the second line, <code>extra_ticks=35</code> stretches A5 from 480 ticks to 515. It is still sounding when G5 begins at tick 720, which is a deliberate 35-tick legato overlap.</p>
+<p>The builder uses only the Python standard library. It writes each file in the same order:</p>
+<ol>
+<li>A Format 0 header with one track and a division of 480.</li>
+<li>At tick 0, the track name, the tempo, and the 4/4 time signature. For 001 at 112 BPM, the tempo event stores 535,714 microseconds per quarter note.</li>
+<li>Every note as an explicit Note On (<code>0x90</code>) and Note Off (<code>0x80</code>) on channel 1, with delta times as variable-length quantities. When one note ends on the same tick another begins, the Note Off is written first.</li>
+<li>One end-of-track event exactly on the loop boundary: tick 7,680 for a four-bar loop.</li>
+</ol>
+<p>There are no program changes, controllers, pitch bends, or SysEx messages. The sound is your patch&#39;s job, so the file behaves the same on every synth.</p>
+<h2 id="how-the-files-were-checked">How the files were checked</h2>
+<p>A validator that shares code with the writer can share its bugs. The builder has its own MIDI parser, so passing its self-check proves little. The pack is checked by two parsers that share no code with the builder or with each other: <a href="https://mido.readthedocs.io/" target="_blank" rel="noreferrer">mido</a> 1.3.3 in Python and <a href="https://github.com/Tonejs/Midi" target="_blank" rel="noreferrer">@tonejs/midi</a> 2.0.28 in Node.</p>
+<p>The 19 checks fall into five families.</p>
+<ul>
+<li><strong>Structure.</strong> Exactly 50 files with IDs that match both CSVs. Every file parses as Format 0 with one track at 480 PPQ. Track name, tempo, and time signature sit at tick 0. Only note messages on channel 1.</li>
+<li><strong>Timing.</strong> Every Note On has an explicit Note Off, Note Offs come first on shared ticks, and a single end-of-track lands on the loop boundary with no note crossing it.</li>
+<li><strong>Content.</strong> Pitch and velocity ranges, the legato rules, an exact match between the parsed notes and the note-event CSV, numerals re-derived from chords, every out-of-scale note listed, and the chord-tone proxy.</li>
+<li><strong>Distinctness.</strong> No exact, transposed, re-velocitied, or re-tempoed duplicates across all 1,225 pairs. A near-duplicate scan compares onset, pitch-class, and interval token sets, and fails anything at 0.85 similarity or above. The closest pairs are 031 and 035 at 0.18 on onset and pitch class, and 011 and 015 at 0.76 on onset grid alone. No pattern is a shorter loop repeated unchanged.</li>
+<li><strong>Packaging.</strong> A clean rebuild in a temporary folder is byte-identical, all 56 output files included. Every SHA-256 in the manifest matches. The ZIP passes its CRC test, and each of its 55 members matches the validated file byte for byte.</li>
+</ul>
+<p>The second parser then reads all 1,024 notes again, along with tempo, meter, channel, and loop end, and compares them with the CSVs. It found zero problems.</p>
+<p>To make sure the checks can fail, one velocity byte and one numeral were deliberately corrupted in a scratch copy. The CSV, numeral, determinism, ZIP, and second-parser checks all failed, as they should.</p>
+<p>The full report ships inside the pack and renders on the <a href="./#validation">validation panel</a>, including the exact commands to reproduce it.</p>
+<h2 id="what-the-checks-cannot-tell-you">What the checks cannot tell you</h2>
+<p>Automated checks prove that the files say what the documentation says. They cannot prove that the music is good. The report lists its own limits.</p>
+<ul>
+<li>Musical quality, memorability, and how a line sits in a mix are judgments. The chord-tone share is a proxy, not a listening test.</li>
+<li>Glide on legato overlaps depends on the receiving synth&#39;s mono legato mode and portamento. It cannot be verified from MIDI.</li>
+<li>The files were not imported into commercial DAWs in this environment. They were parsed with mido and @tonejs/midi.</li>
+<li>The browser preview synth is a sketch of each suggested sound, not the suggested patch itself.</li>
+<li>Near-duplicate detection compares token sets. It cannot judge perceived similarity.</li>
+</ul>
+<h2 id="how-to-use-the-pack-in-your-daw">How to use the pack in your DAW</h2>
+<ol>
+<li><strong>Set the tempo first.</strong> Each pattern&#39;s BPM is in the index CSV and in the file&#39;s tempo event. Some DAWs ignore an imported tempo unless you ask them to keep it.</li>
+<li><strong>Set the loop length yourself.</strong> The end-of-track event sits on the 2-, 4-, or 8-bar boundary, but some DAWs trim a clip to its last note. The loop length is in the CSV and the README.</li>
+<li><strong>Use a mono patch for legato patterns.</strong> Turn on legato glide to hear the overlaps as slides.</li>
+<li><strong>Play the reference chords under the lead.</strong> They are in the index CSV, one per bar. A plain pad is enough to hear whether the line still works.</li>
+<li><strong>Transpose freely.</strong> Almost every note sits between C4 and C6, so a shift of a few semitones keeps the line in a normal lead register.</li>
+</ol>
+<p>The pack suggests one of four sounds for each pattern, and the lab can preview all four.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Preview patch</th>
+<th>Suggested for</th>
+<th>Character</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Neon Saw</td>
+<td>16 patterns</td>
+<td>One sawtooth into a resonant low-pass with a quick filter envelope</td>
+</tr>
+<tr>
+<td>Hollow Pulse</td>
+<td>16 patterns</td>
+<td>Narrow pulse wave, high-passed, with a short gate for cold staccato</td>
+</tr>
+<tr>
+<td>Wide Unison</td>
+<td>10 patterns</td>
+<td>Two saws detuned by about 12 cents, delayed vibrato, long release</td>
+</tr>
+<tr>
+<td>Glass Triangle</td>
+<td>8 patterns</td>
+<td>A triangle with a quiet sine an octave up: soft, close, vocal</td>
+</tr>
+</tbody></table></div>
+<h2 id="faq">FAQ</h2>
+<h3 id="can-i-use-these-midi-files-in-commercial-releases">Can I use these MIDI files in commercial releases?</h3>
+<p>Yes. The patterns are royalty-free in your own music, including commercial releases, film, games, and streams, and no credit is required. You may not resell or redistribute the files themselves, upload them to sample or MIDI sites, or train machine-learning models on them without written permission. The full terms are in LICENSE-PATTERNS.md.</p>
+<h3 id="what-tempo-and-key-are-the-files-in">What tempo and key are the files in?</h3>
+<p>Each file has one integer tempo between 85 and 130 BPM, stored in its tempo event and listed in the index CSV. The pack covers ten tonal centers in natural minor, Dorian, harmonic minor, and Phrygian.</p>
+<h3 id="do-the-files-include-chords-bass-or-drums">Do the files include chords, bass, or drums?</h3>
+<p>No. Each file is a single monophonic lead line on channel 1. The reference chords, one per bar, are in the index CSV and the README. The browser lab can play reference chords and drums so you can hear each lead in context.</p>
+<h3 id="why-are-there-no-cc-pitch-bend-or-program-change-messages">Why are there no CC, pitch-bend, or program-change messages?</h3>
+<p>So the files behave the same on every synth. Sound, glide, and modulation belong to your patch. The suggested sound for each pattern is written in the index CSV, and it is never encoded in the MIDI.</p>
+<h3 id="will-the-files-work-in-ableton-live-fl-studio-logic-or-bitwig">Will the files work in Ableton Live, FL Studio, Logic, or Bitwig?</h3>
+<p>They are standard Format 0 MIDI files that two independent parsers read identically, which is what DAWs expect. They were not tested inside those DAWs in this environment. If one misreads a file, please open an issue on GitHub.</p>
+<h3 id="what-does-bvi-mean-in-the-chord-column">What does bVI mean in the chord column?</h3>
+<p>It is the major chord built on the lowered sixth degree. In A minor that is F major. The numerals are measured from the parallel major scale, so a flat sign means the root sits a semitone below that major-scale degree.</p>
+<h2 id="get-the-pack">Get the pack</h2>
+<p>The <a href="./#lab">pattern lab</a> plays the real files, with the chords underneath and the notes drawn as they are parsed. Filter by group, length, or scale, and share a single pattern with a deep link such as <a href="./#L016">#L016</a>. When a line works, <a href="./#drop">download the ZIP</a> and drag the same file into your session.</p>
+<p>The builder, both validators, and this site are open source on <a href="https://github.com/mizcausevic-dev/nocturnal-synthesis-midi-studio" target="_blank" rel="noreferrer">GitHub</a>.</p>
+
+    </div>
+  </article>
+</div>
+    </main>
+    <div id="site-footer"></div>
+  </body>
+</html>

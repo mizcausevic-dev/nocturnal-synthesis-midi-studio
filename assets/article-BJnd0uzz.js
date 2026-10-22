@@ -1,0 +1,1 @@
+import{c as r,j as e,r as s,S as a,a as c}from"./SiteHeader-D_uOcnZ3.js";const t=document.getElementById("site-header"),o=document.getElementById("site-footer");t&&r.createRoot(t).render(e.jsx(s.StrictMode,{children:e.jsx(a,{home:!1})}));o&&r.createRoot(o).render(e.jsx(s.StrictMode,{children:e.jsx(c,{home:!1})}));

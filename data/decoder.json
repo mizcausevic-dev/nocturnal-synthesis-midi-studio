@@ -1,0 +1,57 @@
+{
+ "patternId": "001",
+ "bar": 1,
+ "file": "scripts/patterns_part1.py",
+ "comment": "# Bar 1 (Am): Iconic octave leap A4 -> A5 with 35-tick legato into G5",
+ "helper": "n(beat, dur_beats, note, velocity, shift_ticks=0, extra_ticks=0)",
+ "lines": [
+  {
+   "line": 34,
+   "source": "n(0.0, 0.5, \"A4\", 104)",
+   "startTick": 0,
+   "durationTicks": 240,
+   "midi": 69,
+   "velocity": 104
+  },
+  {
+   "line": 35,
+   "source": "n(0.5, 1.0, \"A5\", 118, extra_ticks=35)",
+   "startTick": 240,
+   "durationTicks": 515,
+   "midi": 81,
+   "velocity": 118
+  },
+  {
+   "line": 36,
+   "source": "n(1.5, 0.5, \"G5\", 106)",
+   "startTick": 720,
+   "durationTicks": 240,
+   "midi": 79,
+   "velocity": 106
+  },
+  {
+   "line": 37,
+   "source": "n(2.0, 0.75, \"E5\", 110)",
+   "startTick": 960,
+   "durationTicks": 360,
+   "midi": 76,
+   "velocity": 110
+  },
+  {
+   "line": 38,
+   "source": "n(2.75, 0.5, \"D5\", 98)",
+   "startTick": 1320,
+   "durationTicks": 240,
+   "midi": 74,
+   "velocity": 98
+  },
+  {
+   "line": 39,
+   "source": "n(3.25, 0.5, \"E5\", 104)",
+   "startTick": 1560,
+   "durationTicks": 240,
+   "midi": 76,
+   "velocity": 104
+  }
+ ]
+}

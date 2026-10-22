@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" fill="none">
+  <defs>
+    <linearGradient id="mmBg" x1="0" y1="0" x2="1200" y2="680" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#07060A"/>
+      <stop offset="50%" stop-color="#100C18"/>
+      <stop offset="100%" stop-color="#080B12"/>
+    </linearGradient>
+    <radialGradient id="centerHubGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="rgba(102,252,241,0.28)"/>
+      <stop offset="100%" stop-color="rgba(102,252,241,0)"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1200" height="680" rx="16" fill="url(#mmBg)"/>
+  <rect x="1" y="1" width="1198" height="678" rx="15" stroke="rgba(139,92,255,0.28)" stroke-width="1.5"/>
+
+  <text x="40" y="44" fill="#66FCF1" font-family="JetBrains Mono, monospace" font-size="13" letter-spacing="2">TAXONOMY MINDMAP // 50 SYNTHWAVE &amp; DARKWAVE LEAD COMPOSITIONS</text>
+  <text x="40" y="72" fill="#F4F1EA" font-family="Space Grotesk, sans-serif" font-size="22" font-weight="700">Five Creative Archetypes, Modal Distribution, and Melodic Contour Mechanics</text>
+
+  <!-- Connecting bezier curves from Center (600, 355) -->
+  <!-- Group 1: Top Left (230, 175) -->
+  <path d="M 600 355 C 460 355, 380 175, 230 175" stroke="#FF2D55" stroke-width="2.5" fill="none"/>
+  <!-- Group 2: Bottom Left (230, 505) -->
+  <path d="M 600 355 C 460 355, 380 505, 230 505" stroke="#00E0FF" stroke-width="2.5" fill="none"/>
+  <!-- Group 3: Top Right (970, 165) -->
+  <path d="M 600 355 C 740 355, 820 165, 970 165" stroke="#D6FF3F" stroke-width="2.5" fill="none"/>
+  <!-- Group 4: Middle Right (970, 355) -->
+  <path d="M 600 355 L 970 355" stroke="#8B5CFF" stroke-width="2.5" fill="none"/>
+  <!-- Group 5: Bottom Right (970, 545) -->
+  <path d="M 600 355 C 740 355, 820 545, 970 545" stroke="#2FD57A" stroke-width="2.5" fill="none"/>
+
+  <!-- Center Node -->
+  <circle cx="600" cy="355" r="125" fill="url(#centerHubGlow)"/>
+  <circle cx="600" cy="355" r="88" fill="#141824" stroke="#66FCF1" stroke-width="2.5"/>
+  <text x="600" y="332" text-anchor="middle" fill="#66FCF1" font-family="JetBrains Mono, monospace" font-size="12" font-weight="700">NOCTURNAL</text>
+  <text x="600" y="352" text-anchor="middle" fill="#F4F1EA" font-family="Space Grotesk, sans-serif" font-size="18" font-weight="700">50 MIDI LEADS</text>
+  <text x="600" y="374" text-anchor="middle" fill="#9BA3B0" font-family="JetBrains Mono, monospace" font-size="11">1,024 Notes " 218 Bars</text>
+  <text x="600" y="392" text-anchor="middle" fill="#2FD57A" font-family="JetBrains Mono, monospace" font-size="10">480 PPQ " Format 0</text>
+
+  <!-- Node 1: Neon Hooks -->
+  <g transform="translate(35, 105)">
+    <rect width="340" height="145" rx="12" fill="#151221" stroke="#FF2D55" stroke-width="2"/>
+    <text x="18" y="28" fill="#FF2D55" font-family="JetBrains Mono, monospace" font-size="12" font-weight="700">01 // NEON HOOKS (001010)</text>
+    <text x="18" y="50" fill="#F4F1EA" font-family="Space Grotesk, sans-serif" font-size="15" font-weight="700">Immediate Catchy Synthwave Motifs</text>
+    <text x="18" y="74" fill="#C5C6C7" font-family="JetBrains Mono, monospace" font-size="11">" BPM: 98124 | Bars: 2, 4, 8</text>
+    <text x="18" y="94" fill="#C5C6C7" font-family="JetBrains Mono, monospace" font-size="11">" Modes: Nat Minor (8), Dorian (2)</text>
+    <text x="18" y="114" fill="#C5C6C7" font-family="JetBrains Mono, monospace" font-size="11">" Signature: Octave calls &amp; syncopated</text>
+    <text x="18" y="130" fill="#9BA3B0" font-family="JetBrains Mono, monospace" font-size="10">  Chrome Horizon, Turbo Interceptor, Starlight Blvd</text>
+  </g>
+
+  <!-- Node 2: Midnight Sequences -->
+  <g transform="translate(35, 430)">
+    <rect width="340" height="145" rx="12" fill="#101A24" stroke="#00E0FF" stroke-width="2"/>
+    <text x="18" y="28" fill="#00E0FF" font-family="JetBrains Mono, monospace" font-size="12" font-weight="700">02 // MIDNIGHT SEQUENCES (011020)</text>
+    <text x="18" y="50" fill="#F4F1EA" font-family="Space Grotesk, sans-serif" font-size="15" font-weight="700">Pulsing Foreground Melodic Figures</text>
+    <text x="18" y="74" fill="#C5C6C7" font-family="JetBrains Mono, monospace" font-size="11">" BPM: 112128 | Bars: 2, 4, 8</text>
+    <text x="18" y="94" fill="#C5C6C7" font-family="JetBrains Mono, monospace" font-size="11">" Modes: Nat Min, Dorian, Harm Min, Phrygian</text>
+    <text x="18" y="114" fill="#C5C6C7" font-family="JetBrains Mono, monospace" font-size="11">" Signature: Compound pedal + 3+3+2 pulse</text>
+    <text x="18" y="130" fill="#9BA3B0" font-family="JetBrains Mono, monospace" font-size="10">  Grid Runner Pulse, Nocturne Telemetry, Cyberdeck</text>
+  </g>
+
+  <!-- Node 3: Cold Signals -->
+  <g transform="translate(825, 95)">
+    <rect width="340" height="140" rx="12" fill="#141914" stroke="#D6FF3F" stroke-width="2"/>
+    <text x="18" y="28" fill="#D6FF3F" font-family="JetBrains Mono, monospace" font-size="12" font-weight="700">03 // COLD SIGNALS (021030)</text>
+    <text x="18" y="50" fill="#F4F1EA" font-family="Space Grotesk, sans-serif" font-size="15" font-weight="700">Minimal Angular Darkwave Telemetry</text>
+    <text x="18" y="74" fill="#C5C6C7" font-family="JetBrains Mono, monospace" font-size="11">" BPM: 86116 | Bars: 2, 4, 8</text>
+    <text x="18" y="94" fill="#C5C6C7" font-family="JetBrains Mono, monospace" font-size="11">" Modes: Phrygian (4), Harm Min (2), Nat (4)</text>
+    <text x="18" y="114" fill="#C5C6C7" font-family="JetBrains Mono, monospace" font-size="11">" Signature: Clipped staccato &amp; b2/tritone</text>
+    <text x="18" y="130" fill="#9BA3B0" font-family="JetBrains Mono, monospace" font-size="10">  Bunker Transmission, Geiger Waltz, Dead Ch 09</text>
+  </g>
+
+  <!-- Node 4: Haunted Melodies -->
+  <g transform="translate(825, 285)">
+    <rect width="340" height="140" rx="12" fill="#171326" stroke="#8B5CFF" stroke-width="2"/>
+    <text x="18" y="28" fill="#B699FF" font-family="JetBrains Mono, monospace" font-size="12" font-weight="700">04 // HAUNTED MELODIES (031040)</text>
+    <text x="18" y="50" fill="#F4F1EA" font-family="Space Grotesk, sans-serif" font-size="15" font-weight="700">Elegiac Themes &amp; Bittersweet Sighs</text>
+    <text x="18" y="74" fill="#C5C6C7" font-family="JetBrains Mono, monospace" font-size="11">" BPM: 85100 | Bars: 2, 4, 8</text>
+    <text x="18" y="94" fill="#C5C6C7" font-family="JetBrains Mono, monospace" font-size="11">" Modes: Nat Minor (7), Harm Min (2), Dor (1)</text>
+    <text x="18" y="114" fill="#C5C6C7" font-family="JetBrains Mono, monospace" font-size="11">" Signature: 9/10 Legato, Neapolitan bII</text>
+    <text x="18" y="130" fill="#9BA3B0" font-family="JetBrains Mono, monospace" font-size="10">  Ghost in the CRT, Sepulcher of Glass, Androids</text>
+  </g>
+
+  <!-- Node 5: Cinematic Flight -->
+  <g transform="translate(825, 475)">
+    <rect width="340" height="140" rx="12" fill="#101F1A" stroke="#2FD57A" stroke-width="2"/>
+    <text x="18" y="28" fill="#2FD57A" font-family="JetBrains Mono, monospace" font-size="12" font-weight="700">05 // CINEMATIC FLIGHT (041050)</text>
+    <text x="18" y="50" fill="#F4F1EA" font-family="Space Grotesk, sans-serif" font-size="15" font-weight="700">Widescreen Soaring Interval Arcs</text>
+    <text x="18" y="74" fill="#C5C6C7" font-family="JetBrains Mono, monospace" font-size="11">" BPM: 114130 | Bars: 4, 8</text>
+    <text x="18" y="94" fill="#C5C6C7" font-family="JetBrains Mono, monospace" font-size="11">" Modes: Nat Min (6), Dor (2), Harm Min (2)</text>
+    <text x="18" y="114" fill="#C5C6C7" font-family="JetBrains Mono, monospace" font-size="11">" Signature: 6th/8ve/10th leaps to F#6</text>
+    <text x="18" y="130" fill="#9BA3B0" font-family="JetBrains Mono, monospace" font-size="10">  Stratosphere Burn, Hyperdrive, Omega Dawn</text>
+  </g>
+</svg>

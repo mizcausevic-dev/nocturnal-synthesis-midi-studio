@@ -1,0 +1,133 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 580" fill="none">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="1200" y2="580" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#07080D"/>
+      <stop offset="50%" stop-color="#0D111A"/>
+      <stop offset="100%" stop-color="#090A10"/>
+    </linearGradient>
+    <linearGradient id="cyanGlow" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#66FCF1"/>
+      <stop offset="100%" stop-color="#00B4D8"/>
+    </linearGradient>
+    <linearGradient id="pinkGlow" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FF2D55"/>
+      <stop offset="100%" stop-color="#8B5CFF"/>
+    </linearGradient>
+    <linearGradient id="acidGlow" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#2FD57A"/>
+      <stop offset="100%" stop-color="#D6FF3F"/>
+    </linearGradient>
+    <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="rgba(102,252,241,0.05)" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <rect width="1200" height="580" rx="16" fill="url(#bgGrad)"/>
+  <rect width="1200" height="580" rx="16" fill="url(#grid)"/>
+  <rect x="1" y="1" width="1198" height="578" rx="15" stroke="rgba(102,252,241,0.22)" stroke-width="1.5"/>
+
+  <!-- Header -->
+  <text x="40" y="48" fill="#66FCF1" font-family="JetBrains Mono, monospace" font-size="13" letter-spacing="2">SYSTEM ARCHITECTURE // DETERMINISTIC SMF FORMAT-0 COMPILER &amp; BINARY AUDITOR</text>
+  <text x="40" y="78" fill="#F4F1EA" font-family="Space Grotesk, sans-serif" font-size="24" font-weight="700">From Musical Theory Specification to Bit-Verified Binary MIDI &amp; Web Audio Synthesis</text>
+
+  <!-- Stage 1 -->
+  <g transform="translate(40, 115)">
+    <rect width="250" height="290" rx="12" fill="#121722" stroke="#66FCF1" stroke-width="1.5"/>
+    <rect x="16" y="16" width="74" height="24" rx="4" fill="rgba(102,252,241,0.12)"/>
+    <text x="26" y="33" fill="#66FCF1" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">STAGE 01</text>
+    <text x="16" y="64" fill="#F4F1EA" font-family="Space Grotesk, sans-serif" font-size="18" font-weight="700">Compositional Spec</text>
+    <text x="16" y="92" fill="#9BA3B0" font-family="Space Grotesk, sans-serif" font-size="13">50 Distinct Lead Patterns</text>
+    <line x1="16" y1="108" x2="234" y2="108" stroke="rgba(255,255,255,0.08)"/>
+    <text x="16" y="132" fill="#C5C6C7" font-family="JetBrains Mono, monospace" font-size="12">" 5 Groups × 10 Hooks</text>
+    <text x="16" y="156" fill="#C5C6C7" font-family="JetBrains Mono, monospace" font-size="12">" 480 PPQ Integer Ticks</text>
+    <text x="16" y="180" fill="#C5C6C7" font-family="JetBrains Mono, monospace" font-size="12">" 2, 4, 8 Bars (4/4 Time)</text>
+    <text x="16" y="204" fill="#C5C6C7" font-family="JetBrains Mono, monospace" font-size="12">" MIDI 5596 (96.6% 6084)</text>
+    <text x="16" y="228" fill="#C5C6C7" font-family="JetBrains Mono, monospace" font-size="12">" Legato Gate: 160 Ticks</text>
+    <text x="16" y="252" fill="#66FCF1" font-family="JetBrains Mono, monospace" font-size="12">" 1,024 Note Events</text>
+  </g>
+
+  <!-- Arrow 1->2 -->
+  <path d="M 294 260 L 328 260" stroke="#66FCF1" stroke-width="2" stroke-dasharray="4 3"/>
+  <polygon points="328,255 338,260 328,265" fill="#66FCF1"/>
+
+  <!-- Stage 2 -->
+  <g transform="translate(342, 115)">
+    <rect width="250" height="290" rx="12" fill="#121722" stroke="#8B5CFF" stroke-width="1.5"/>
+    <rect x="16" y="16" width="74" height="24" rx="4" fill="rgba(139,92,255,0.16)"/>
+    <text x="26" y="33" fill="#B699FF" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">STAGE 02</text>
+    <text x="16" y="64" fill="#F4F1EA" font-family="Space Grotesk, sans-serif" font-size="18" font-weight="700">SMF Format-0 Encoder</text>
+    <text x="16" y="92" fill="#9BA3B0" font-family="Space Grotesk, sans-serif" font-size="13">Deterministic Binary Stream</text>
+    <line x1="16" y1="108" x2="234" y2="108" stroke="rgba(255,255,255,0.08)"/>
+    <text x="16" y="132" fill="#C5C6C7" font-family="JetBrains Mono, monospace" font-size="12">" MThd (Fmt 0, 1 Trk, 480)</text>
+    <text x="16" y="156" fill="#C5C6C7" font-family="JetBrains Mono, monospace" font-size="12">" Tick 0: Name, Tempo, 4/4</text>
+    <text x="16" y="180" fill="#C5C6C7" font-family="JetBrains Mono, monospace" font-size="12">" Ch 1 (0x90 / 0x80 Only)</text>
+    <text x="16" y="204" fill="#C5C6C7" font-family="JetBrains Mono, monospace" font-size="12">" Priority Sort at Tick T:</text>
+    <text x="28" y="226" fill="#FF2D55" font-family="JetBrains Mono, monospace" font-size="11">1. Note-Off (0x80) First</text>
+    <text x="28" y="246" fill="#66FCF1" font-family="JetBrains Mono, monospace" font-size="11">2. Note-On  (0x90) Second</text>
+    <text x="28" y="266" fill="#2FD57A" font-family="JetBrains Mono, monospace" font-size="11">3. EOT (FF 2F 00) @ Loop</text>
+  </g>
+
+  <!-- Arrow 2->3 -->
+  <path d="M 596 260 L 630 260" stroke="#8B5CFF" stroke-width="2" stroke-dasharray="4 3"/>
+  <polygon points="630,255 640,260 630,265" fill="#8B5CFF"/>
+
+  <!-- Stage 3 -->
+  <g transform="translate(644, 115)">
+    <rect width="250" height="290" rx="12" fill="#121722" stroke="#FF2D55" stroke-width="1.5"/>
+    <rect x="16" y="16" width="74" height="24" rx="4" fill="rgba(255,45,85,0.16)"/>
+    <text x="26" y="33" fill="#FF2D55" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">STAGE 03</text>
+    <text x="16" y="64" fill="#F4F1EA" font-family="Space Grotesk, sans-serif" font-size="18" font-weight="700">Binary Re-Parser &amp; QA</text>
+    <text x="16" y="92" fill="#9BA3B0" font-family="Space Grotesk, sans-serif" font-size="13">Zero-Trust Disk Verification</text>
+    <line x1="16" y1="108" x2="234" y2="108" stroke="rgba(255,255,255,0.08)"/>
+    <text x="16" y="132" fill="#C5C6C7" font-family="JetBrains Mono, monospace" font-size="12">" Reopen 50 .mid from Disk</text>
+    <text x="16" y="156" fill="#C5C6C7" font-family="JetBrains Mono, monospace" font-size="12">" 100% CSV Bit-Match Check</text>
+    <text x="16" y="180" fill="#C5C6C7" font-family="JetBrains Mono, monospace" font-size="12">" 1,225 Pairwise Diffs:</text>
+    <text x="28" y="202" fill="#2FD57A" font-family="JetBrains Mono, monospace" font-size="11"> 0 Exact Duplicates</text>
+    <text x="28" y="222" fill="#2FD57A" font-family="JetBrains Mono, monospace" font-size="11"> 0 Transposed Clones</text>
+    <text x="28" y="242" fill="#2FD57A" font-family="JetBrains Mono, monospace" font-size="11"> 0 Sub-Loop Repeats</text>
+    <text x="16" y="266" fill="#66FCF1" font-family="JetBrains Mono, monospace" font-size="11">" 218/218 Bar Roman Audit</text>
+  </g>
+
+  <!-- Arrow 3->4 -->
+  <path d="M 898 260 L 932 260" stroke="#2FD57A" stroke-width="2" stroke-dasharray="4 3"/>
+  <polygon points="932,255 942,260 932,265" fill="#2FD57A"/>
+
+  <!-- Stage 4 -->
+  <g transform="translate(946, 115)">
+    <rect width="214" height="290" rx="12" fill="#121722" stroke="#2FD57A" stroke-width="1.5"/>
+    <rect x="16" y="16" width="74" height="24" rx="4" fill="rgba(47,213,122,0.16)"/>
+    <text x="26" y="33" fill="#2FD57A" font-family="JetBrains Mono, monospace" font-size="11" font-weight="700">STAGE 04</text>
+    <text x="16" y="64" fill="#F4F1EA" font-family="Space Grotesk, sans-serif" font-size="18" font-weight="700">Executive Studio</text>
+    <text x="16" y="92" fill="#9BA3B0" font-family="Space Grotesk, sans-serif" font-size="13">Web Audio + Deliverables</text>
+    <line x1="16" y1="108" x2="198" y2="108" stroke="rgba(255,255,255,0.08)"/>
+    <text x="16" y="132" fill="#C5C6C7" font-family="JetBrains Mono, monospace" font-size="12">" Dry vs FX Synth Engine</text>
+    <text x="16" y="156" fill="#C5C6C7" font-family="JetBrains Mono, monospace" font-size="12">" Live Canvas Piano Roll</text>
+    <text x="16" y="180" fill="#C5C6C7" font-family="JetBrains Mono, monospace" font-size="12">" Legato Gate Visualizer</text>
+    <text x="16" y="204" fill="#C5C6C7" font-family="JetBrains Mono, monospace" font-size="12">" 50 .mid + 2 CSVs + ZIP</text>
+    <text x="16" y="228" fill="#C5C6C7" font-family="JetBrains Mono, monospace" font-size="12">" 7-Theme UI Switcher</text>
+    <text x="16" y="256" fill="#D6FF3F" font-family="JetBrains Mono, monospace" font-size="12">" GH Pages Live Preview</text>
+  </g>
+
+  <!-- Bottom Timeline / Legato Micro-Timing Diagram -->
+  <g transform="translate(40, 430)">
+    <rect width="1120" height="115" rx="12" fill="#101520" stroke="rgba(255,255,255,0.1)"/>
+    <text x="24" y="30" fill="#66FCF1" font-family="JetBrains Mono, monospace" font-size="12" font-weight="700">TIMING &amp; LEGATO OVERLAP INVARIANT (480 PPQ RESOLUTION)</text>
+
+    <!-- Non-overlapping box -->
+    <text x="24" y="58" fill="#C5C6C7" font-family="JetBrains Mono, monospace" font-size="11">legato: no (21 patterns)</text>
+    <rect x="210" y="44" width="140" height="20" rx="4" fill="rgba(102,252,241,0.25)" stroke="#66FCF1"/>
+    <text x="220" y="58" fill="#F4F1EA" font-family="JetBrains Mono, monospace" font-size="10">Note A [0..480]</text>
+    <rect x="350" y="44" width="140" height="20" rx="4" fill="rgba(139,92,255,0.25)" stroke="#8B5CFF"/>
+    <text x="360" y="58" fill="#F4F1EA" font-family="JetBrains Mono, monospace" font-size="10">Note B [480..960]</text>
+    <text x="210" y="82" fill="#9BA3B0" font-family="JetBrains Mono, monospace" font-size="10">At tick 480: 0x80 Note-Off(A) written BEFORE 0x90 Note-On(B)  0 tick overlap</text>
+
+    <!-- Legato box -->
+    <text x="580" y="58" fill="#FF2D55" font-family="JetBrains Mono, monospace" font-size="11">legato: yes (29 patterns)</text>
+    <rect x="770" y="40" width="165" height="18" rx="4" fill="rgba(255,45,85,0.28)" stroke="#FF2D55"/>
+    <text x="780" y="53" fill="#F4F1EA" font-family="JetBrains Mono, monospace" font-size="10">Note A [0..515] (+35t)</text>
+    <rect x="905" y="54" width="165" height="18" rx="4" fill="rgba(47,213,122,0.28)" stroke="#2FD57A"/>
+    <text x="940" y="67" fill="#F4F1EA" font-family="JetBrains Mono, monospace" font-size="10">Note B [480..960]</text>
+    <rect x="905" y="40" width="30" height="32" fill="rgba(214,255,63,0.25)" stroke="#D6FF3F" stroke-dasharray="2 2"/>
+    <text x="580" y="92" fill="#D6FF3F" font-family="JetBrains Mono, monospace" font-size="10">Overlap window [480..515] = 35 ticks (strictly 1..60 ticks, adjacent different pitches only)</text>
+  </g>
+</svg>
