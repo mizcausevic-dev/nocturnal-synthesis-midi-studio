@@ -1,0 +1,23 @@
+{
+  "label": "General MIDI FluidR3 preview, not a master",
+  "why_fluidr3": "src/audio/engine.ts is a live Web Audio lab. It does not write an audio file, and tools/ has no offline renderer. FluidR3 is the fallback.",
+  "source": "midi/001_chrome_horizon.mid",
+  "source_sha256": "0ca5dc5ff7a6af7e9d5b05dd21911f5c6b5e92c9dc770f66ff01f03cced5280a",
+  "soundfont": "FluidR3_GM.sf2",
+  "program_change_in_file": false,
+  "gm_program": "No program change in the file. FluidR3 plays the default Acoustic Grand Piano.",
+  "looped_to_fill_preview": true,
+  "score_seconds": 8.571424,
+  "repeats": 4,
+  "audio": "media/preview-Cursor/nocturnal-synthesis-preview-Cursor.mp3",
+  "video": "media/preview-Cursor/nocturnal-synthesis-preview-Cursor.mp4",
+  "captions": "media/preview-Cursor/nocturnal-synthesis-preview-Cursor.vtt",
+  "audio_sha256": "4d7269b0d7061ebc561a5478d1ab2f0f38d781306d513dc44729e98119044ce2",
+  "video_sha256": "f7460436e7c4c78cc48e52249259a29d7a617b316c0732b52f69f988cf296f33",
+  "on_screen_text": "preview, not master",
+  "art": [
+    "public/images/hero_nocturnal_synthesis.jpg",
+    "public/images/synthwave_vs_darkwave_duality.jpg",
+    "public/images/og-hero.jpg"
+  ]
+}
